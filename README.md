@@ -9,6 +9,8 @@ Esta é a versão estática da landing page "Filhos Seguros" da Marjorie Fonseca
 - `script.js` - Arquivo JavaScript com todas as funcionalidades interativas
 - `logo_marjorie_fonseca.png` - Logo da Marjorie Fonseca
 - `README.md` - Este arquivo de documentação
+- `IMG_8078.jpg` - Imagem Marjorie
+- `IMG_7426.jpg` - Imagem Marjorie
 
 ## Funcionalidades
 
