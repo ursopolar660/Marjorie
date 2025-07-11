@@ -98,7 +98,7 @@ quanto aquela Marjorie de antes estava enganada
         </div>
         <div class="button">
             <button class="btn">
-                <a href=".livros">
+                <a href="#livro">
                     Comprar
                 </a>
             </button>
@@ -107,24 +107,28 @@ quanto aquela Marjorie de antes estava enganada
     <section class="livros" id="livro">
         <div class="grid-livro">
             <img src="assets/rect333.png" alt="Capa do Livro">
-            <h2>Obra Literária</h2>
-            <p>Nesta história delicada e comovente, conhecemos Gabi e sua babá — que com carinho e presença genuína, ocupa um espaço emocional deixado vazio pelos seus pais, devido a uma rotina agitada de compromissos. Com sensibilidade e ternura, o livro revela o vínculo que floresce entre a babá e a criança, despertando na mãe uma nova consciência sobre sua participação na vida da filha. Mais do que um retrato familiar, esta obra é um convite à empatia, ao acolhimento e à reflexão sobre os diferentes formatos de cuidado e amor nas famílias contemporâneas.</p>
-            <button class="btn btn-primary">
-                <a href="#">
-                    Comprar
-                </a>
-            </button>
+            <div class="descricao">
+                <h2>Obra Literária</h2>
+                <p>Nesta história delicada e comovente, conhecemos Gabi e sua babá — que com carinho e presença genuína, ocupa um espaço emocional deixado vazio pelos seus pais, devido a uma rotina agitada de compromissos. Com sensibilidade e ternura, o livro revela o vínculo que floresce entre a babá e a criança, despertando na mãe uma nova consciência sobre sua participação na vida da filha. Mais do que um retrato familiar, esta obra é um convite à empatia, ao acolhimento e à reflexão sobre os diferentes formatos de cuidado e amor nas famílias contemporâneas.</p>
+                <button class="btn btn-primary">
+                    <a href="#">
+                        Comprar
+                    </a>
+                </button>
+            </div>
         </div>
         <div class="grid-livro">
-            <h2>E-Book</h2>
-            <h4>OS SETE MAIORES PERIGOS QUE SEU FILHO ENFRENTA ONLINE</h4>
-            <p>Neste eBook, vamos falar sobre os 7 maiores perigos que seus filhos podem enfrentar online. Perigos que, muitas vezes, passam despercebidos aos olhos dos adultos, mas deixam marcas profundas no emocional, na segurança e até no desenvolvimento das crianças.</p>
+            <div class="descricao">
+                <h2>E-Book</h2>
+                <h4>OS SETE MAIORES PERIGOS QUE SEU FILHO ENFRENTA ONLINE</h4>
+                <p>Neste eBook, vamos falar sobre os 7 maiores perigos que seus filhos podem enfrentar online. Perigos que, muitas vezes, passam despercebidos aos olhos dos adultos, mas deixam marcas profundas no emocional, na segurança e até no desenvolvimento das crianças.</p>
+                <button class="btn btn-primary">
+                    <a href="#">
+                        Comprar
+                    </a>
+                </button>
+            </div>
             <img src="assets/rect393.png" alt="Capa do Livro">
-            <button class="btn btn-primary">
-                <a href="#">
-                    Comprar
-                </a>
-            </button>
     </section>
     <section class="curso-aboult">
         <h2>
@@ -133,13 +137,18 @@ quanto aquela Marjorie de antes estava enganada
         <div class="aboult-course">
             <div class="item1">
                 <p>Curso baseado no Método M.E.T.A. que mostra passo a passo como proteger seus filhos na internet com segurança, clareza e sem precisar entender de tecnologia.</p>
+                
             </div>
             <div class="item2">
-                <p>
-                    <span class="dark-blue">Filhos Seguros Online</span> se diferencia dos cursos tradicionais por sua linguagem simples, vídeos curtos e fáceis de aplicar, mesmo para quem não entende de tecnologia.
-                </p>
-                <br>
-                <p>Oferece tutoriais passo a passo, para serem aplicados na prática, plano de ação familiar e foco na educação digital, <span class="light-blue">não apenas no controle parental.</span> </p>
+                <div class="separar">
+                        <p>
+                            <span class="dark-blue">Filhos Seguros Online</span> se diferencia dos cursos tradicionais por sua linguagem simples, vídeos curtos e fáceis de aplicar, mesmo para quem não entende de tecnologia.
+                        </p>
+                        <p>
+
+                            Oferece tutoriais passo a passo, para serem aplicados na prática, plano de ação familiar e foco na educação digital, <span class="light-blue">não apenas no controle parental.</span>
+                        </p>
+                    </div>
             </div>
             <div class="item3">
                 <p>Você vai transformar o celular e o computador dos seus filhos em ambientes seguros – <span class="light-blue">em menos de 7 dias – com ferramentas simples e estratégias testadas.</span></p>
@@ -150,30 +159,34 @@ quanto aquela Marjorie de antes estava enganada
         </div>
     </section>
 
-    <form action="#" class="contato" id="contato">
-        <h5>Quero Ser Avisada Quando as Inscrições do Curso Filhos Seguros Online Abrirem!</h5>
-        <p>Nome:</p>
-        <input type="text" name="nome" placeholder="Digite seu nome" id="nome" required>
-        <p>E-mail:</p>
-        <input type="text" name="email" id="email" placeholder="Digite seu e-mail" required>
-        <p>WhatsApp:</p>
-        <input type="text" name="telefone" id="telefone" placeholder="Digite seu WhatsApp" required>
-    </form>
+    <div class="form">
+
+        <form action="#" class="contato" id="contato">
+            <h5>Quero Ser Avisada Quando as Inscrições do Curso Filhos Seguros Online Abrirem!</h5>
+            <p>Nome:</p>
+            <input type="text" name="nome" placeholder="Digite seu nome" id="nome" required>
+            <p>E-mail:</p>
+            <input type="text" name="email" id="email" placeholder="Digite seu e-mail" required>
+            <p>WhatsApp:</p>
+            <input type="text" name="telefone" id="telefone" placeholder="Digite seu WhatsApp" required>
+            <input type="submit" value="Enviar" class="btn btn-primary">
+        </form>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="contato">
             <a href="https://www.instagram.com/marjorie.fonseca" class="insta"><img src="assets/instagram-svgrepo-com.svg" alt=""></a>
-            <a href="mailto:direitodigital.pratico@gmail.com" class="email"><img src="assets/email-1573-svgrepo-com.svg" alt=""></a>
+            <a href="mailto:direitodigital.pratico@gmail.com" class="email"><img src="assets/email.svg" alt=""></a>
             <a href="https://api.whatsapp.com/send?phone=5531997145880" class="whatsapp"><img src="assets/whatsapp-svgrepo-com.svg" alt=""></a>
-            <cite>"Os filhos não precisam de pais perfeitos, mas de pais
-reais, que saibam pedir perdão, ouvir e estar presentes."
-— Augusto Cury</cite>
         </div>
         <div class="container">
             <div class="footer-content">
                 <img src="assets/logo_marjorie_fonseca.png" alt="Marjorie Fonseca" class="footer-logo">
                 
+                <cite>"Os filhos não precisam de pais perfeitos, mas de pais
+        reais, que saibam pedir perdão, ouvir e estar presentes."
+        — Augusto Cury</cite>
                 <p class="footer-copyright">
                     © 2025 Marjorie Fonseca. Todos os direitos reservados.
                 </p>

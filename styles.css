@@ -7,6 +7,11 @@
     --variable-color: #606060;
     --text-color: #000;
     --font-family: 'Montserrat', sans-serif;
+    --blue-color: #056c94;
+    --light-blue-color: #a8d8ea;
+    --dark-blue-color: #003049;
+    --light-gray-color: #f0f0f0;
+    --dark-gray-color: #333;
 }
 
 * {
@@ -23,7 +28,7 @@
 }
 
 .btn{
-    background-color: var(--primary-color);
+    background-color: var(--blue-color);
     display: inline-block;
     padding: 0.5rem 1.5rem;
     font-size: 1.2rem;
@@ -32,7 +37,7 @@
     border-radius: 2rem;
     transition: background-color 0.3s, color 0.3s;
     & a {
-        color: #000000;
+        color: #fff;
         text-decoration: none;
         border-radius: 2em;
         -webkit-border-radius: 2em;
@@ -45,7 +50,7 @@
         }
     }
     &:hover {
-        background-color: var(--accent-color);
+        background-color: var(--dark-blue-color);
         color: #fff;
         
     }
@@ -194,7 +199,7 @@
     
 }
 .livros {
-    background-color: var(--primary-color);
+    background-color: var(--dark-blue-color);
     padding: 2.2em;
     padding-inline: 5em;
 
@@ -204,35 +209,266 @@
         gap: 2em;
         align-items: center;
 
-        & .grid-item {
-            position: relative;        /* Necessário para posicionamento absoluto do número */
-            background-color: #fff;
-            border-radius: 1.5em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 30%;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 3em 1em 1em 1em;  /* padding extra no topo para o número */
-        }
+        
 
         & img {
-            height: 300px;
+            height: 500px;
             margin-bottom: 2em;
             margin-top: 50px;
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+}
+        & .descricao {
+            color: #fff;
+            text-align: center;
+            border: #056c94 solid 1px;
+            padding-inline: 2em;
+            height: 500px;
+            overflow-y: hidden;
+            border-radius: 10px;
+            width: 30%;
         }
         
-        & h3 {
-            width: 70%;
+        & h2 {
+            width: 100%;
+            font-size: 1.4rem;
+            text-transform: uppercase;
             margin-bottom: 0.5em;
+            margin-block: 1em;
         }
         
         & p {
-            width: 90%;
+            width: 100%;
+            margin-block: 1.5em;
         }
     }
 }
 
+.curso-aboult {
+    background-color: var(--dark-gray-color);
+    color: #fff;
+    padding: 2.2em;
+    padding-inline: 5em;
+
+    & h2 {
+        text-align: center;
+        margin-bottom: 1em;
+        font-size: 2.5rem;
+    }
+
+    & span{
+        color: var(--blue-color);
+    }
+    
+    & .aboult-course {
+        display: flex;
+        justify-content: space-around;
+        gap: 2em;
+        height: 100svh;
+
+        & span{
+            color: #056c94;
+        }
+
+        & .item1{
+            border-radius: 1.5em;
+            background-image: url('assets/criança.png');
+            background-size: contain;
+            background-position: center;
+            width: 95%;
+            height: 87%;
+            background-attachment: relative;
+            background-repeat: no-repeat;
+            margin-bottom: 2em;
+
+            & p {
+                font-size: 1rem;
+                padding: 2em;
+                font-size: 1.2em;
+                font-weight: 600;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+        }
+        & .item2{
+            border-radius: 1.5em;
+            background-image: url('assets/familia-conect.png');
+            background-size: contain;
+            background-position: center;
+            width: 95%;
+            height: 87%;
+            background-attachment: relative;
+            background-repeat: no-repeat;
+            margin-bottom: 2em;
+
+            & .separar{
+                padding-block: 0.4em;
+                
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                background-size: cover;
+                & p {
+                    font-size: 1rem;
+                    padding: 2em;
+                    font-size: 1.2em;
+                    font-weight: 600;
+                    & span{
+                        text-transform: uppercase;
+                        color: aquamarine;
+                    }
+                }
+            }
+
+        }
+        & .item3{
+            border-radius: 1.5em;
+            background-image: url('assets/rect482.png');
+            background-size: contain;
+            background-position: center;
+            width: 95%;
+            height: 87%;
+            background-attachment: relative;
+            background-repeat: no-repeat;
+            margin-bottom: 2em;
+
+            & p {
+                font-size: 1rem;
+                padding: 2em;
+                font-size: 1.2em;
+                font-weight: 600;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.6);
+                & span{
+                    text-transform: uppercase;
+                    color: aquamarine;
+                }
+            }
+        }
+    }
+    & .meta{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2em;
+
+        & img{
+            width: 30em;
+            height: auto;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+        }
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100svh;
+    background-color: var(--light-gray-color);
+    
+    & .contato{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100svw;
+        padding: 2em;
+        border-radius: 1.5em;
+
+        & h5 {
+            font-size: 2.5rem;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+        & p {
+            font-size: 1.2rem;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+        & input{
+            width: 80%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid var(--primary-color);
+            border-radius: 0.5em;
+            font-size: 1rem;
+        }
+    }
+}
+
+.footer {
+    background-color: var(--dark-blue-color);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+    & .contato{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2em;
+        & a {
+            width: 100px;
+            height: 100px;
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1em;
+            
+            transition: color 0.3s;
+
+            &:hover {
+                color: var(--light-blue-color);
+            }
+            & img{
+                width: 50px;
+                height: 50px;
+                filter: brightness(100);
+                -webkit-filter: brightness(100);
+                &:hover{
+                    filter: brightness(0);
+                    -webkit-filter: brightness(0);
+                }
+            }
+            
+            }
+            
+        }
+    }
+    & .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    & .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1em;
+        & img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 1em;
+        }
+    & p {
+        margin: 0;
+        font-size: 1rem;
+        }
+    }
+}
