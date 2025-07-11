@@ -10,86 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     setupMobileMenu();
 });
 
-// Função para abrir o modal
-function openModal() {
-    const modal = document.getElementById('modal');
-    if (modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Previne scroll do body
-        
-        // Foca no primeiro input do formulário
-        const firstInput = modal.querySelector('input[type="text"]');
-        if (firstInput) {
-            setTimeout(() => firstInput.focus(), 100);
-        }
-    }
-}
 
-// Função para fechar o modal
-function closeModal() {
-    const modal = document.getElementById('modal');
-    if (modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = ''; // Restaura scroll do body
-    }
-}
 
-// Função para lidar com o envio do formulário
-function submitForm(event) {
-    event.preventDefault();
-    
-    const form = event.target;
-    const formData = new FormData(form);
-    const name = form.querySelector('input[type="text"]').value;
-    const email = form.querySelector('input[type="email"]').value;
-    const wpp = form.querySelector('input[type="text"][id="whatsapp"]').value;
-    
-    // Validação básica
-    if (!name.trim() || !email.trim()) {
-        alert('Por favor, preencha todos os campos.');
-        return;
-    }
-    
-    if (!isValidEmail(email)) {
-        alert('Por favor, insira um e-mail válido.');
-        return;
-    }
-    
-    // Simula envio do formulário
-    // Em uma implementação real, você enviaria os dados para um servidor
-    // Envio dos dados para o Google Sheets via Google Apps Script Web App
-    // Substitua a URL abaixo pela URL do seu Google Apps Script
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzQgP8a9wmPTaswdQPJQp1KRS3Bv8Bz22trxM9SkBttGCLBrAz94rdnCRK8fvQrdtR8TA/exec';
-
-    fetch(scriptURL, {
-        method: 'POST',
-        body: new URLSearchParams({
-            name: name,
-            email: email,
-            whatsapp: wpp
-        })
-    })
-    .then(response => {
-        // Opcional: tratar resposta se necessário
-        console.log('Dados enviados para o Google Sheets:', { name, email, wpp });
-    })
-    .catch(error => {
-        console.error('Erro ao enviar dados para o Google Sheets:', error);
-    });
-
-    // ATENÇÃO: Substitua 'COLE_AQUI_A_URL_DO_SEU_GOOGLE_APPS_SCRIPT' pela URL do seu script publicado no Google Apps Script
-    
-    // Mostra mensagem de sucesso
-    showSuccessMessage(name);
-    
-    // Limpa o formulário
-    form.reset();
-    
-    // Fecha o modal após um breve delay
-    setTimeout(() => {
-        closeModal();
-    }, 2000);
-}
 
 // Função para validar e-mail
 function isValidEmail(email) {
@@ -177,8 +99,8 @@ function setupMobileMenu() {
 // Função para animar elementos quando entram na viewport (opcional)
 function setupScrollAnimations() {
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.5,
+        rootMargin: '0px 0px -100px 0px'
     };
     
     const observer = new IntersectionObserver(function(entries) {
@@ -191,11 +113,11 @@ function setupScrollAnimations() {
     }, observerOptions);
     
     // Observa elementos que devem ser animados
-    const animatedElements = document.querySelectorAll('.feature-card, .stat-card, .method-card');
+    const animatedElements = document.querySelectorAll('.feature-card, .stat-card, .method-card, .final-quote');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transform = 'translateX(30px)';
+        el.style.transition = 'opacity 0.9s ease, transform 0.8s ease';
         observer.observe(el);
     });
 }
